@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Hugues Ricour">
+    <title>Helioso Learning Center - main index</title>
+    
+    <link rel="canonical" href="https://www.helioso.com/">
+
+
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="./assets/img/brand/fav.png"> 
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    
+  </head>
+
+  <body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="bootstrap" viewBox="0 0 118 94">
+    <title>Bootstrap</title>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+  </symbol>
+  <symbol id="home" viewBox="0 0 16 16">
+    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+  </symbol>
+  <symbol id="pricing" viewBox="0 0 16 16" >
+    <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+    <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+    <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+    <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+  </symbol>
+  <symbol id="about" viewBox="0 0 16 16" >
+    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+  </symbol>
+  <symbol id="gear-fill" viewBox="0 0 16 16">
+    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+  </symbol>
+  <symbol id="chat-quote-fill" viewBox="0 0 16 16">
+    <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+  </symbol>
+  <symbol id="boxes" viewBox="0 0 16 16">
+    <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
+  </symbol>
+  <symbol id="analytics" viewBox="0 0 16 16" >
+    <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
+    <path d="M10 7a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7Zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1Zm4-3a1 1 0 0 0-1 1v3a1 1 0 1 0 2 0V9a1 1 0 0 0-1-1Z"/>
+</symbol>
+  <symbol id="speedometer2" viewBox="0 0 16 16">
+    <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+    <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+  </symbol>
+  <symbol id="table" viewBox="0 0 16 16">
+    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+  </symbol>
+  <symbol id="joystick" viewBox="0 0 16 16">
+  <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
+  <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
+  </symbol>
+  <symbol id="people-circle" viewBox="0 0 16 16">
+    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+  </symbol>
+  <symbol id="chevron-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+  </symbol>
+  <symbol id="collection" viewBox="0 0 16 16">
+    <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+  </symbol>
+  <symbol id="grid" viewBox="0 0 16 16">
+    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+  </symbol>
+</svg>
+
+
+<main>
+
+  <h1 class="visually-hidden">Headers</h1>
+
+  <header class="p-3 text-bg-dark" style="position: fixed; z-index: 10; width: 100%">
+    <div class="container">
+
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="./index.html">
+        <img src="./assets/img/brand/Logo_Helioso_v61web.png" alt="Helioso logo"  width="73" height="auto"></a>
+        
+
+        <ul class="nav col-12 col-md-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="font-size: 15px; margin-left: 12%;">
+        
+         <li><a href="#" class="nav-link px-2 text-secondary">
+            <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#home"/></svg>
+            Home</a></li> 
+
+          <li>
+             <a href="./Authentification/index.html" class="nav-link px-2 text-white" style="margin-left: 22px;" > 
+             <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#joystick"/></svg>
+             SpacePlan</span> </a></li>
+
+          <li><a href="#features" class="nav-link px-2 text-white" style="margin-left: 22px;" >
+            <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#boxes"/></svg>
+            <span id="btnfeatures">Features</span></a></li>
+
+          <li><a href="./Pricing/index.html" class="nav-link px-2 text-white" style="margin-left: 24px;"> 
+            <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#pricing"/></svg>
+            <span id="btnpricing">Pricing</span></a></li>
+
+          <li><a href="./About/index.html" class="nav-link px-2 text-white" style="margin-left: 24px;" >
+            <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#chevron-right"/></svg>
+            <span id="btnabout">About</span></a></li>
+        </ul>
+       
+        <div class="text-end">
+          
+          <a href="./Authentification/index.html">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          </a>  
+          
+        </div>
+      </div>
+
+    </div>
+  </header>
+  
+  <br/><br/><br/><br/><br/>
+  
+  <div style="margin-left: 72%; font-size: 13px; margin-top: -10px;">
+
+       <span style="padding: 2px; opacity: 0.95; color: black; font-size: 18px; ">🌐</span>
+      
+            <a href="#en" id="ENG" style="color: #242424; text-decoration: none">English</a> | 
+            <a href="#fr" id="FRA" style="color: #242424; text-decoration: none">Français</a> 
+
+            <span id="ESP"></span>
+      <!--     
+            |        
+            <a href="#es" id="ESP" style="color: #242424; text-decoration: none">Español</a>  -->  
+  </div>
+
+  <p class="text-center" style="color:rgb(0, 183, 255)";><strong><i>Beta version</i></strong></p>
+  
+  <p class="text-center">
+    _____________________<br/>
+  </p>
+  
+  
+  <div class="text-center" style="margin-top: 28px;">
+   
+  <p >  <strong><h2><span id="welcome">WELCOME TO HELIOSO LEARNING CENTER</span></h2></strong>  </p>  
+   
+  _____________________<br/>
+   <br/>
+
+  <p id="discover"> Discover our first e-learning game: </p>
+    
+    <div class="text-center">
+      <a href="./Authentification/index.html">
+      <img src="./assets/img/brand/SpacePlan-bug.png" alt="SpacePlan Logo" width="230" height="auto" style="padding: 2px;"/>
+    <br/>
+      </a>
+    </div>
+    <br /><br />
+    <p><h4><strong><span id="levelup">Level up your Project Management skills!</span></strong></h4></p>
+    <p style="margin-left: 15%; margin-right: 15%;" id="game">Our engaging e-learning game will develop your knowledge while having fun. It will also prepare you for job interviews in tech or gaming.  </p>  
+  </div>
+  
+  <p class="center" id="target">For students and professionals.</p>
+
+  <br /> 
+
+  
+  <div class="text-center">
+  
+      <a href="./Authentification/index.html">
+    <svg class="bi d-block mx-auto mb-1" width="40" height="40" style="color:black"><use xlink:href="#joystick"/></svg> <br />
+          <button type="button" class="btn btn-warning" style="z-index: 8; font-size: 19px; box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), 2px 2px 6px 2px rgba(0, 0, 0, 0.11); margin-bottom: 6px;">
+          <strong><span id="tryf">Play SpacePlan for free</span> &raquo;</strong></button>
+      </a>
+    </span>
+    
+  </div>
+
+  <!-- 
+  <div class="text-center">
+    <a href="./Sign-up.html">
+      <type="button" class="btn btn-warning"><strong>Sign up &raquo;</strong></button>
+    </a>
+  </div>-->
+ 
+  <br/><br/>
+
+
+<div class="container1" style="background-color: rgb(230, 230, 230); ">
+   
+    <p> <br /><br /> <strong> <span id="pm">Become SpacePlan's project manager!</span> </strong><br />
+    <span id="thrills">Experience the thrills of managing a creative project, from prototyping to delivering a Beta build.</span> 
+    <br/><br/>
+    </p>
+</div>
+
+  
+<div class="containerE">
+
+	<div class="card1">
+	  <div class="card1__inner">
+		<div class="card1__face card1__face--front">
+		  <h3 style="margin-top: 13px;">
+			<strong> ① <br/>
+        <div style="font-size: 18px; margin-top: 6px;">
+				<span id="string1">SHAPE A BUSINESS CASE</span><br/>
+        				<span id="string2">& DESIGN A PROTOTYPE</span><br/><br/><br/>
+        </div>        
+			</strong></h3>
+      
+     <div class="container1" style="margin-top: -18px; padding: 4px;">
+       <img style="border: 2px solid black; border-radius: 4px; margin: 6px; padding: 2px;" src="./assets/img/SIscreenshots/SI-Proto3.jpg" width="340" height="244" alt="proto" id="sishot">
+     </div>
+  
+  <br/>
+
+		</div>
+
+		<div class="card1__face card1__face--back">
+		  <div class="card1__content">
+			<div class="card1__header">
+				  <h2>CONCEPTION<br/>PHASE<br/></h2>
+			</div>
+			<div class="card1__body">
+  
+        <br/>
+
+  <div style="background-color: #141414; color: #fbfbfb; font-size: 15px; font-weight: 550; text-align: center; margin-top: 5px;
+   border-radius: 3px; padding: 3px;"><span id="string3">WHAT & WHO</span></div>
+
+
+<p style="margin: 22px;">
+  <span id="string4">Project pitch & key features</span> <br/>
+  <span id="string5">Design Thinking & Target audience</span> <br/>
+  <span id="string6">High level Timeline </span><br/>
+  <span id="string7">High level budget </span><br/>
+  <span id="string8">Project Mandate</span>
+
+</p>
+     
+  <div style="background-color: #ff8800; color: #000000; font-size: 15px; font-weight: 550; text-align: center; margin-top: 5px;
+   border-radius: 5px; padding: 3px;">
+     <svg class="bi d-block mx-auto mb-1" width="22" height="22" style="color:black"><use xlink:href="#joystick"/></svg>
+   PROTOTYPE</div>
+
+    <br/>
+
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+
+  
+	<div class="card2">
+	  <div class="card2__inner">
+		<div class="card2__face card2__face--front">
+
+		  <h3 style="margin-top: -16px;"> <strong> ②  <br/>
+        <div style="font-size: 18px; margin-top: 6px;">
+			  <span id="string9">INITIATE THE PROJECT & BUILD</span> <br/>
+				<span id="string10">A FIRST PLAYABLE PUBLISHABLE</span>	<br/><br/>	<br/>						
+        </div>
+			</strong> </h3>
+
+      <br/>
+
+      <div class="container1" style="margin-top: -36px; padding: 4px;">
+         <img style="border: 2px solid black; border-radius: 4px; padding: 2px;" src="./assets/img/SIscreenshots/SI-FPP1.jpg" width="340" height="244" alt="fpp" id="sishot">
+      </div>
+
+		</div>
+
+		<div class="card2__face card2__face--back">
+		  <div class="card2__content">
+			<div class="card2__header">
+			    <h2>PRE-PRODUCTION<br/>PHASE<br/></h2>
+			</div>
+			<div class="card2__body">
+
+        <br/>
+        
+  <div style="background-color: #141414; color: #fbfbfb; font-size: 15px; font-weight: 550; text-align: center; margin-top: 5px;
+   border-radius: 3px; padding: 3px;"><span id="string11">WHAT, WHEN & HOW</span></div>
+
+<p style="margin: 22px;">
+  <span id="string12">Design, Features & FP deliverables </span><br/>
+  <span id="string13">Project scope & Production plan </span><br/>
+  <span id="string14">Estimates & Capacity plan </span><br/>
+  <span id="string15">Risks & budget</span> <br/>
+  <span id="string16">Development</span>
+
+</p>
+			  
+  <div style="background-color: #FF8800; color: #000000; font-size: 15px; font-weight: 550; text-align: center; margin-top: 5px;
+  border-radius: 5px; padding: 3px;">
+   <svg class="bi d-block mx-auto mb-1" width="22" height="22" style="color:black"><use xlink:href="#joystick"/></svg>
+  FPP BUILD</div>
+  
+
+  
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+
+
+	
+	<div class="card3">
+	  <div class="card3__inner">
+		<div class="card3__face card3__face--front">
+		  <h3 style="margin-top: -18px;"><strong> ③  <br/>
+        <div style="font-size: 18px; margin-top: 6px;">
+			  <span id="string17">IMPLEMENT YOUR PLAN</span> <br/>
+				<span id="string18">DELIVER A BETA BUILD</span> <br/><br/><br/>								
+        </div>
+      </strong> </h3>
+		
+      <div class="container1" style="margin-top: -10px; padding: 4px;">
+         <img style="border: 2px solid black; border-radius: 4px; padding: 2px;" src="./assets/img/SIscreenshots/SI-Beta1.jpg" width="340" height="244" alt="fpp" id="sishot">
+      </div>
+    
+    </div>
+
+		<div class="card3__face card3__face--back">
+		  <div class="card3__content">
+			<div class="card3__header">
+			    <h2>PRODUCTION<br/> & CLOSING</h2>
+			</div>
+			<div class="card3__body">
+  
+
+                <br/>
+        
+  <div style="background-color: #141414; color: #fbfbfb; font-size: 15px; font-weight: 550; text-align: center; margin-top: 5px;
+   border-radius: 3px; padding: 3px;"><span id="string19">DELIVERY</span></div>
+
+<p style="margin: 22px;">
+ <span id="string20"> Alpha and Beta deliverables</span> <br/>
+ <span id="string21"> Kanban & Development</span> <br/>
+ <span id="string22"> Tests & Playtests</span> <br/>
+ <span id="string23"> Iterations & polish</span><br/>
+ <span id="string24"> P&L and KPIs</span>  
+
+</p>
+    
+			  
+  <div style="background-color: #FF8800; color: #000000; font-size: 15px; font-weight: 550; text-align: center; margin-top: 5px;
+  border-radius: 5px; padding: 3px;">
+   <svg class="bi d-block mx-auto mb-1" width="22" height="22" style="color:black"><use xlink:href="#joystick"/></svg>
+  BETA BUILD</div>
+  
+
+  
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+
+  </div>
+
+
+  <br/>
+
+
+  <div class="container1" style="height: 180px">
+  
+  <p style="width: 55%; margin-top: 12px;"><strong><span id="role"> "Role Play pedagogy has been shown to be effective in reaching learning outcomes in three major learning domains: 
+    affective, cognitive, and behavioral." </span></strong> <br/> (harvard.edu: Maier, 2002; Rao & Stupans, 2012)
+  </p>  
+  
+  </div>
+  
+  <br/><br />
+
+  <div class="container1"  style="margin-left: 16%; margin-right: 16%; border-radius: 3px; padding: 10px; background-color: white;  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.19), 0 5px 8px 2px rgba(0, 0, 0, 0.16);">
+    <div class="image1">
+      <img src="./assets/img/presentation/ProjectManagement-Pillars.jpg" id="pillars" width="366" height="Auto" alt="PM pillars">
+    </div>
+    <div class="text" style="text-align: left; font-size: 21px; padding: 0; margin: auto; overflow-x: hidden;">
+      <ul>
+        <br/>
+        <span id="play">PLAY</span> <br/>
+        <strong><span id="learn">LEARN</span></strong><br/>
+        <span id="improve">IMPROVE</span><br/>
+        <span id="share">SHARE</span><br/>
+        <br/>
+      </ul>  
+    </div>
+  </div>
+
+
+  <br/>
+  <section id="features">
+  <br/>
+
+
+    
+   <div style="background-color: rgb(230, 230, 230); ">
+    
+    <br/> <br/>
+        
+<div class="definition-box1" style="text-align: center; font-size: 19px;">
+<p style="padding-top: 12px;">
+ 
+❝<span id="string5000">The key to successful project management is to know which questions to ask and when.</span>❞ - Harold Kerzner <br/>
+</p>
+</div>
+<br/><br/>
+
+<div style="text-align: center; font-size: 19px;">
+<p>
+<strong><span id="string5001">SpacePlan offers you a TOOL BOX for Tech Project Management.</span></strong> <br/>
+</p>
+</div>
+  
+  <br/> 
+
+    <div class="text-center">
+        <img src="./assets/img/presentation/HLC-content1.jpg" id="content" width="400" height="Auto" alt="Content" />
+    </div>
+   
+  <br/><br/>
+
+   </div>
+
+  <div class = text-center>
+    ____________________<br/><br/>
+
+    <p id="explore" style="font-size: 18px;">Spaceplan develops the following skills: </p>
+    
+  </div>
+    
+  <br/>
+  
+  <div class="pricing-table">
+    <div class="ptable-item">
+      <div class="ptable-single">
+        <div class="ptable-header">
+          <div class="ptable-title">
+            <h2> <span id="planning">Planning</span></h2>
+          </div>
+        </div>
+        <div class="ptable-body">
+          <div class="ptable-description">
+            <ul>
+              <li><span id="planification">Planification</span></li>
+              <li><span id="timem">Time management</span></li>
+              <li><span id="adaptation">Adaptation</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="ptable-item featured-item">
+      <div class="ptable-single">
+        <div class="ptable-header">
+          <div class="ptable-title">
+            <h2><span id="process">Process</span></h2>
+          </div>
+        </div>
+        <div class="ptable-body">
+          <div class="ptable-description">
+            <ul>
+              <li><span id="organization">Organization</span></li>
+              <li><span id="optimization">Optimization</span></li>
+              <li><span id="criticalt">Critical thinking</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="ptable-item">
+      <div class="ptable-single">
+        <div class="ptable-header">
+          <div class="ptable-title">
+            <h2><span id="business">Business</span></h2>
+          </div>
+        </div>
+        <div class="ptable-body">
+          <div class="ptable-description">
+            <ul>
+              <li><span id="strategict">Strategic Thinking</span></li>
+              <li><span id="budgetm">Budget management</span></li>
+              <li><span id="riskm">Risk management</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ptable-item featured-item">
+      <div class="ptable-single">
+        <div class="ptable-header">
+          <div class="ptable-title">
+            <h2><span id="delivery">Delivery</span></h2>
+          </div>
+        </div>
+        <div class="ptable-body">
+          <div class="ptable-description">
+            <ul>
+              <li><span id="taskm">Task management</span></li>
+              <li><span id="workd">Work delivery</span></li>
+              <li><span id="decisionm">Decision making</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br/><br/> 
+
+  
+  <div class="text-center">
+  
+      <a href="./Authentification/index.html">
+    <svg class="bi d-block mx-auto mb-1" width="44" height="44" style="color:black"><use xlink:href="#joystick"/></svg> <br />
+          <button type="button" class="btn btn-warning" style="z-index: 8; font-size: 19px; box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), 2px 2px 6px 2px rgba(0, 0, 0, 0.11); margin-bottom: 6px;">
+          <strong><span id="tryn">Play SpacePlan now</span> &raquo;</strong></button>
+      </a>
+    </span>
+    
+  </div>
+    
+  <br/> 
+
+  <br/><br/><br/><br/><br/>  
+  
+</div> 
+  
+
+   <header>
+    <div class="px-3 py-2 text-bg-dark">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-left justify-content-center justify-content-lg-start">
+        
+          <span style="font-size: 13px; margin-right: 240px; margin-top: 18px;"> <a href="https://www.helioso.com/" style="color: #f3f3f3; text-decoration: none"> Helioso</a> &copy; 2024</span> 
+
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <a href="#" class="nav-link text-secondary">
+                <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#home"/></svg>
+                Home</a>
+            </li>
+
+<!-- 
+            <li>
+              <a href="./Analytics/index.html" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#analytics"/></svg>
+                <span id="analytics2">Analytics</span></a>
+            </li>-->
+          
+            <li>
+              <a href="https://www.helioso.com/contact-copy" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#chat-quote-fill"/></svg>
+                <span id="feedback">Feedback</span></a>
+            </li>
+         
+          </ul>
+
+        </div>
+      </div>
+    </div>
+   </header>
+
+  
+
+</main>
+
+   
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script  src="./js/HLC-index.js"></script>  
+   
+    <script src="./dist/bundle.js"></script>
+
+  </body>
+
+
+</html>
