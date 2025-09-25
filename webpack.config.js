@@ -8,7 +8,7 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     devtool: 'eval-source-map',
-    entry: './src/index.js',
+    entry: './src/js/index.js',
     output: {
       //changed here after chatgpt fix, was:  filename: 'bundle.js',
        filename: 'bundle.js', // Put bundle.js inside dist/ folder inside public/ 
@@ -19,9 +19,28 @@ module.exports = {
     watch: true,
 
      plugins: [
+      // Main page
     new HtmlWebpackPlugin({
       template: './src/index.html', // your HTML template
+       filename: 'index.html', // output name
     }),
+
+    // HLCpage page
+    new HtmlWebpackPlugin({
+      template: './src/pages/HLCpage.html',
+      filename: 'HLCpage.html', // output name in dist
+    }),
+    // Services page
+    new HtmlWebpackPlugin({
+      template: './src/pages/services.html',
+      filename: 'services.html',
+    }),
+    // Services page
+    new HtmlWebpackPlugin({
+      template: './src/pages/contact.html',
+      filename: 'contact.html',
+    }),
+
      new CopyWebpackPlugin({
       patterns: [
         {
