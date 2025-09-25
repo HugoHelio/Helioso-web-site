@@ -24,23 +24,32 @@ module.exports = {
     }),
      new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/assets', to: 'assets' }, // ✅ copy entire assets folder
+        {
+          from: 'src/assets', // ✅ copies everything inside assets/
+          to: 'assets',
+          noErrorOnMissing: true, // don’t break if empty
+          }, // ✅ copy entire assets folder
+     
+
       ],
     }),
   ],
     
-    module: {
-      rules: [
-        {
-          test: /\.css$/i,
-          use: [
-            'style-loader',
-            'css-loader'
-          ],
+ module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i, // ✅ also handle image imports in JS
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/img/[name][ext]', // output images in assets/img/
         },
-      ],
-    },
-
+      },
+    ],
+  },
 
   resolve: {
     extensions: ['.js'],
