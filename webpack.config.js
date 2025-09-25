@@ -24,7 +24,7 @@ module.exports = {
     }),
      new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/style.css', to: '' }, // copy CSS to dist/
+        { from: 'src/assets', to: 'assets' }, // ✅ copy entire assets folder
       ],
     }),
   ],
