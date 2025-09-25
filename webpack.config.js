@@ -6,12 +6,12 @@ const path = require('path');
 
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     devtool: 'eval-source-map',
     entry: './src/js/index.js',
     output: {
       //changed here after chatgpt fix, was:  filename: 'bundle.js',
-       filename: 'bundle.js', // Put bundle.js inside dist/ folder inside public/ 
+       filename: 'bundle.[contenthash].js', // Put bundle.js inside dist/ folder inside public/ 
       // changed: was: path: path.resolve(__dirname, 'public/dist'),
       path: path.resolve(__dirname, 'dist'), // Output goes to public/, not public/dist/
       clean: true, // clean old files in dist
