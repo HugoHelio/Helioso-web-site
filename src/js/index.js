@@ -29,48 +29,52 @@ const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
 
+import '../assets/css/style.css';
 
 
 
 // Simple carousel logic
-
 document.addEventListener('DOMContentLoaded', () => {
-
-  const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
   const nextBtn = document.querySelector('.carousel-btn.next');
   const prevBtn = document.querySelector('.carousel-btn.prev');
   const carouselContainer = document.querySelector('.carousel-container');
 
-  if (!slides.length || !nextBtn || !prevBtn || !carouselContainer) return;
-
   let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-    currentSlide = index;
+  function updateCarousel() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
   }
 
+  // Arrow buttons
   nextBtn.addEventListener('click', () => {
-    showSlide((currentSlide + 1) % slides.length);
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel();
   });
 
   prevBtn.addEventListener('click', () => {
-    showSlide((currentSlide - 1 + slides.length) % slides.length);
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateCarousel();
   });
 
+  // Automatic slide every 3s
   let autoSlide = setInterval(() => {
-    showSlide((currentSlide + 1) % slides.length);
-  }, 3000);
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel();
+  }, 5000);
 
+  // Pause on hover
   carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
   carouselContainer.addEventListener('mouseleave', () => {
     autoSlide = setInterval(() => {
-      showSlide((currentSlide + 1) % slides.length);
-    }, 3000);
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateCarousel();
+    }, 5000);
   });
 
-  showSlide(0);
-
+  // Initialize
+  updateCarousel();
+  window.addEventListener('resize', updateCarousel);
 });

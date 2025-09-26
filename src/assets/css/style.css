@@ -110,12 +110,7 @@ body {
     font-family: var(--font-family);
     color: var(--font-color);
     background-color: var(--background-color);
-}
-
-
-  body {
     font-family: Helvetica;
-    background: #f5f5f5;    
     -webkit-font-smoothing: antialiased;
   }
 
@@ -134,7 +129,7 @@ body {
 
   .bi {
     vertical-align: -.125em;
-    fill: black;
+    fill: currentColor;
    
   }
 
@@ -177,14 +172,13 @@ body {
 
 
 .definition-box1 {
-  background: linear-gradient(135deg, #fdfdfd, #434343);
+  background: linear-gradient(135deg, #f5f5f5, #a4a4a4);
   border: 1px solid #d8d8d8;
   border-radius: 14px;
   padding: 15px 18px;
   margin: 15px auto;
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-  margin-left: 5%;
-  margin-right: 5%;
+ 
   z-index: 3;
 }
 
@@ -229,7 +223,7 @@ button:hover, .btn:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  max-width: 1100px;
+  max-width: 1210px;
   margin: 0 auto;
 }
 
@@ -283,113 +277,87 @@ button:hover, .btn:hover {
 
 /* section how */
 
+/* How Section */
 .how-section {
-  background: #111;
+  background: linear-gradient(135deg,#171717, #4e4e4e );
   color: #fff;
-  padding: 100px 20px;
-  position: relative;
+  padding: 60px 20px;
   text-align: center;
   overflow: hidden;
 }
 
 .section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 40px;
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #eee;
 }
 
-/*
-.carousel {
+/* Carousel */
+.carousel-container {
+  position: relative;
   max-width: 900px;
   margin: 0 auto;
   overflow: hidden;
-  position: relative;
-}
-  */
-
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
 }
 
-
-/*
 .carousel-track {
-  display: flex;
+  display: flex;                 /* slides side by side */
   transition: transform 0.5s ease-in-out;
-}
-  */
-
-.carousel-track {
-  position: relative;
-  overflow: hidden;
+  padding-top: 8px;
 }
 
 .carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-  pointer-events: none; /* prevents clicks on hidden slides */
+  min-width: 100%;               /* one slide visible */
+ 
 }
-
-.carousel-slide.active {
-  opacity: 1;
-  pointer-events: auto; /* only active slide is clickable */
-}
-
 
 .carousel-card {
-  min-width: 100%;
-  padding: 40px 25px;
-}
-
-.carousel-card a {
   display: block;
-  background: #1a1a1a;
+  background: #212121;
   border-radius: 16px;
   padding: 50px 30px;
   text-decoration: none;
-  color: inherit;
   transition: background 0.3s ease, transform 0.3s ease;
+  margin: 1px;
 }
 
 .carousel-card h3 {
   font-size: 1.6rem;
   margin-bottom: 15px;
+  color: #ff6200;
 }
 
 .carousel-card p {
   font-size: 1.1rem;
   line-height: 1.5;
   opacity: 0.9;
+  text-decoration: none;
+  color: #f7f7f7;
 }
 
-.carousel-card a:hover {
-  background: #222;
+.carousel-card:hover {
+  background: #333333;
   transform: translateY(-5px);
 }
 
+/* Buttons */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
   padding: 10px 15px;
   border-radius: 50%;
-  transition: background 0.3s ease;
   z-index: 2;
 }
 
 .carousel-btn:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .carousel-btn.prev {
@@ -401,70 +369,24 @@ button:hover, .btn:hover {
 }
 
 
-/* 
 
-.how-section {
-  text-align: center;
-  padding: 5rem 2rem;
-  background: #fff; 
-  color: #333333;
+/* Bio section */
+
+.linkedin-icon {
+  color: #ff6600; /* orange, change to #000 for black or #555 for grey */
+  font-size: 32px; /* adjust size */
+  transition: color 0.3s;
 }
 
-.how-section h2 {
-  font-size: 1.7rem;
-  margin-bottom: 2rem;
-  font-weight: 550;
-  color: #333333;
+.linkedin-icon:hover {
+  color: #0077b5; /* LinkedIn blue on hover */
 }
 
-
-.how-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.how-card {
-  padding: 2rem;
-  border: 2px solid #eee;
-  border-radius: 16px;
-  background: #fafafa;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.how-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #222;
-  transition: color 0.3s ease;
-}
-
-.how-card p {
-  font-size: 1rem;
-  color: #555;
-}
-
-
-.how-card:hover {
-  border-color: var(--brand-orange, #ff6600); 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transform: translateY(-5px);
-  background: #fff;
-}
-
-.how-card:hover h3 {
-  color: var(--brand-orange, #ff6600);
-}
-
-*/
 
 
   /* Pricing tables */
 
-/*
+
   
 h1.demo-title {
   text-align: center;
@@ -699,5 +621,4 @@ h1.demo-title a {
   color: #FF6A1F;
   background: #000000;
 }
-
 

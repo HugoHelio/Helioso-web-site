@@ -6,7 +6,7 @@ const path = require('path');
 
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     devtool: 'eval-source-map',
     entry: './src/js/index.js',
     output: {
@@ -25,6 +25,7 @@ module.exports = {
      port: 5500,
      open: true,       // opens browser automatically
      hot: true,        // enables hot module replacement
+     watchFiles: ['src/**/*.html', 'src/**/*.css'], // watch HTML/CSS changes
      },
 
      plugins: [
