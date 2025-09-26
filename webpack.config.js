@@ -28,17 +28,17 @@ module.exports = {
     // HLCpage page
     new HtmlWebpackPlugin({
       template: './src/pages/HLCpage.html',
-      filename: 'HLCpage.html', // output name in dist
+      filename: 'pages/HLCpage.html', // output name in dist
     }),
     // Services page
     new HtmlWebpackPlugin({
       template: './src/pages/services.html',
-      filename: 'services.html',
+      filename: 'pages/services.html',
     }),
     // Services page
     new HtmlWebpackPlugin({
       template: './src/pages/contact.html',
-      filename: 'contact.html',
+      filename: 'pages/contact.html',
     }),
 
      new CopyWebpackPlugin({
