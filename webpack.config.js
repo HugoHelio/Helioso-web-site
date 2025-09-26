@@ -16,29 +16,42 @@ module.exports = {
       path: path.resolve(__dirname, 'dist'), // Output goes to public/, not public/dist/
       clean: true, // clean old files in dist
     },
-    watch: true,
+    
+    devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+     },
+     compress: true,
+     port: 5500,
+     open: true,       // opens browser automatically
+     hot: true,        // enables hot module replacement
+     },
 
      plugins: [
       // Main page
     new HtmlWebpackPlugin({
       template: './src/index.html', // your HTML template
        filename: 'index.html', // output name
+       inject: 'body',  // <- automatically inject bundle
     }),
 
     // HLCpage page
     new HtmlWebpackPlugin({
       template: './src/pages/HLCpage.html',
       filename: 'pages/HLCpage.html', // output name in dist
+      inject: 'body',  // <- automatically inject bundle
     }),
     // Services page
     new HtmlWebpackPlugin({
       template: './src/pages/services.html',
       filename: 'pages/services.html',
+      inject: 'body',  // <- automatically inject bundle
     }),
     // Services page
     new HtmlWebpackPlugin({
       template: './src/pages/contact.html',
       filename: 'pages/contact.html',
+      inject: 'body',  // <- automatically inject bundle
     }),
 
      new CopyWebpackPlugin({

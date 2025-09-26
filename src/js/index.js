@@ -2,7 +2,7 @@
 
   
 
- import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
  
  // import { getAnalytics, logEvent } from "firebase/analytics";
 
@@ -26,5 +26,51 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
 
+
+
+
+
+// Simple carousel logic
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const carouselContainer = document.querySelector('.carousel-container');
+
+  if (!slides.length || !nextBtn || !prevBtn || !carouselContainer) return;
+
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    currentSlide = index;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    showSlide((currentSlide + 1) % slides.length);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    showSlide((currentSlide - 1 + slides.length) % slides.length);
+  });
+
+  let autoSlide = setInterval(() => {
+    showSlide((currentSlide + 1) % slides.length);
+  }, 3000);
+
+  carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
+  carouselContainer.addEventListener('mouseleave', () => {
+    autoSlide = setInterval(() => {
+      showSlide((currentSlide + 1) % slides.length);
+    }, 3000);
+  });
+
+  showSlide(0);
+
+});
