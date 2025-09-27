@@ -10,9 +10,13 @@
     
     <link rel="canonical" href="https://www.helioso.com/">
 
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="./assets/img/brand/fav.png"> 
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/assets/img/brand/fav.png"> 
+ 
+    <!-- Font Awesome 6 Free -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     
   </head>
 
@@ -75,6 +79,12 @@
   <symbol id="grid" viewBox="0 0 16 16">
     <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
   </symbol>
+  <!-- 8-bit Alien SVG (Space Invader style) -->
+  <symbol id="space-invader" viewBox="0 0 32 32">
+   <path d="M8 4h2v2h2V4h8v2h2V4h2v4h2v2h2v8h-2v2h-2v2h2v2h-4v-2h-2v2h-2v-2h-4v2h-2v-2h-2v2H6v-2h2v-2H6v-2H4v-8h2V8h2V4h2v2h2V4zm2 10v4h2v-4h-2zm8 0v4h2v-4h-2z"/>
+  </symbol>
+
+
 </svg>
 
 
@@ -84,26 +94,44 @@
 
 
 <!-- Header -->
-<header class="section flex-center" style="background-color: var(--primary-color); color: white; flex-direction: column; text-align: center;">
-    <h1>Helioso</h1>
-    <p>Boost your tech & game projects with strategy, coaching & learning experiences</p>
-    <div>
-        <a href="learning.html" class="btn">Play SpacePlan</a>
-        <a href="contact.html" class="btn" style="margin-left: 1rem;">Contact Me</a>
-    </div>
+<header class="section flex-left" style="background-color: var(--background-color); flex-direction: column; text-align: left; height: 140px; margin-top: -24px;">
+  
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" style="padding-left: 3%; margin-top: -12px;">
+        <a href="/index.html">
+        <img src="/assets/img/brand/LogoNew_Helioso_v1.png" alt="Helioso logo"  width="54" height="auto" style="margin-top: -14px;"> 
+        <span style="margin-left: 20px; letter-spacing: 2px; font-size: 30px; font-weight: 550; color: rgb(255, 77, 0);">
+          HELIOSO</span> </a>
+        
+
+        <ul class="nav col-12 col-md-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="font-size: 15px; margin-left: 30%; ">
+        
+        
+          <li><a href="/pages/services.html" class="nav-link px-2" style="margin-left: 72px; color: #333333;" >
+            <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#boxes"/></svg>
+            <span id="btnservices">Services</span></a></li>
+
+          <li><a href="/pages/HLCpage.html" class="nav-link px-2" style="margin-left: 40px; color: #ff5100;"> 
+             <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#joystick"/></svg>
+            <span id="btnhlc" style="color: #333333;">Learning Center</span></a></li>
+
+          <li><a href="/pages/contact.html" class="nav-link px-2" style="margin-left: 36px; color: #333333;" >
+            <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#chevron-right"/></svg>
+            <span id="btncontact">About</span></a></li>
+        </ul>
+  
+      </div>
+
 </header>
 
-
-
   
-  <br/><br/><br/>
   
-  <div style="margin-left: 72%; font-size: 13px; margin-top: -10px;">
+  <div style="margin-left: 80%; font-size: 13px; margin-top: -10px; display: none;">
 
-       <span style="padding: 2px; opacity: 0.95; color: black; font-size: 18px; ">🌐</span>
+    <img src="/assets/img/presentation/lang1.png" alt="language" width="27" height="auto" style="padding: 1px; opacity: 0.65; margin-top: -2px;"/>
       
-            <a href="#en" id="ENG" style="color: #242424; text-decoration: none">English</a> | 
-            <a href="#fr" id="FRA" style="color: #242424; text-decoration: none">Français</a> 
+      
+            <a href="#en" id="ENG" style="color: #242424; text-decoration: none">En</a> | 
+            <a href="#fr" id="FRA" style="color: #242424; text-decoration: none">Fr</a> 
 
             <span id="ESP"></span>
       <!--     
@@ -111,74 +139,237 @@
             <a href="#es" id="ESP" style="color: #242424; text-decoration: none">Español</a>  -->  
   </div>
 
-
   
-  
-  <div class="text-center" style="margin-top: 28px;">
-   
-  <p >  <strong><h2><span id="welcome">HELIOSO LEARNING CENTER</span></h2></strong>  </p>  
-   
-  _____________________<br/>
-   <br/>
-
-
-
-
-  
-
-  <!-- 
-  <div class="text-center">
-    <a href="./Sign-up.html">
-      <type="button" class="btn btn-warning"><strong>Sign up &raquo;</strong></button>
-    </a>
-  </div>-->
- 
-  <br/><br/>
-
-
-
-
-  <br/><br/>
-
-
-
-  <div class = text-center>
-    ____________________<br/><br/>
+    
+<div class="definition-box00">
 
     
+ <div style="color:#333333; z-index: 3; text-align: left; padding-left: 46px; font-size: 18px;">
 
-  <br/><br/> 
+  <br/><br/><br/>
+  <span style="font-size: 32px; font-weight: 550;"> JOIN HELIOSO LEARNING CENTER</span><br/>
+  <br/>
+  In this era of short attention spans and constant stimulation, <br/>
+  training individuals has become a real challenge.<br/>
+  Our e-learning game leans on gamification to engage the audience.  <br/>
+  Discover SpacePlan!
+
+ <br/><br/>
+
+  <a href="https://hlc.helioso.com/#en">
+    
+          <button type="button" class="button1" style="color: #333333; z-index: 4; border: 1px solid #333333; box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), 2px 2px 6px 2px rgba(0, 0, 0, 0.11); margin-bottom: 6px;">
+          Play Now &raquo;</button>
+  </a>
+
+  
+  <div style="align-content: right; text-align: right; margin-top: -347px;">
+     <img src="../assets/img/presentation/imageBG1.jpg" alt="gamification"  width="460" height="auto" style="order:2" > 
+  </div>
 
   
 
-  <p id="discover"> Discover our first e-learning game: </p>
+ </div>
+
+ 
+  <div style="align-content: left; text-align: left; margin-top: -90px;">
+     <img src="/assets/img/presentation/background1.png" alt="bkg"  width="300" height="auto" style="margin-right: 42px;" > 
+  </div>
+
+ </div>
+
+  <br/><br/>
+
+
+  <div class="text-center">
+
+  <p style="font-size: 16px;"> with </p>
     
     <div class="text-center">
-      <a href="./Authentification/index.html">
-      <img src="./assets/img/brand/SpacePlan-bug.png" alt="SpacePlan Logo" width="230" height="auto" style="padding: 2px;"/>
+      <a href="https://hlc.helioso.com/#en">
+      <img src="../assets/img/brand/SpacePlan-bug.png" alt="SpacePlan Logo" width="230" height="auto" style="padding: 2px;"/>
     <br/>
       </a>
     </div>
-    <br />
 
-  <br /> 
+  <p class="text-center" style="color: rgb(255, 106, 0);">
+    ___________________<br/>
+  </p>
+  
+
+<section class="how-section">
+  <h2 class="section-title">Become a top 10% Project Manager!</h2>
+  <div class="carousel-container">
+    <button class="carousel-btn prev">‹</button>
+
+    <div class="carousel-track">
+      <div class="carousel-slide">
+        <a href="/pages/contact.html" class="carousel-card" style="text-decoration: none;">
+          <h3>Build a Business Case</h3>
+          <p>Market insights, opportunity & solutions.<br/>
+             Project Mandate, Objectives, Timeline<br/>
+             Prototyping, Key Performance Indicators</p>
+          <p class="icon" style="font-size: 30px; color:#ff6c11"><i class="fa-solid fa-briefcase"></i></p>
+        </a>
+      </div>
+      <div class="carousel-slide">
+        <a href="/pages/contact.html" class="carousel-card">
+          <h3>Initiiate the project</h3>
+          <p>Scope definition, Process flow.<br/>
+             Deliverables prioritization, Planning.<br/>
+             Staffing, Budget, Risk management</p>
+          <p class="icon" style="font-size: 30px; color:#ff6c11"><i class="fa-solid fa-file-lines"></i></i></p>
+    
+        </a>
+      </div>
+      <div class="carousel-slide">
+        <a href="/pages/HLCpage.html" class="carousel-card">
+          <h3>Implement you plan</h3>
+          <p style="text-decoration: none;">Estimates, dependencies, Gantt chart definition.<br/>
+             Features & backlog development.<br/>
+             User Testing, polish and retrospective.<br/>
+               <svg class="bi d-block mx-auto mb-1" width="45" height="44" style="margin-top: 16px; color:#ff6c11"><use xlink:href="#space-invader"/></svg></p>
+        </a>
+      </div>
+    </div>
+
+    <button class="carousel-btn next">›</button>
+  </div>
+
+<br/>
+
+</section>
 
 
+
+  <div style="align-content: right; text-align: right; margin-top: -208px;">
+     <img src="/assets/img/presentation/background2.png" alt="bkg"  width="382" height="auto" style="margin-right: 0px;" > 
+  </div>
+
+  <br/>
+
+  </div>
+
+  
+
+  
+ <br/> 
+ 
+
+  <p class="text-center" style="color: rgb(255, 106, 0);">
+    ___________________<br/>
+  </p>
+  
+
+ <div class="text-center">
+
+    <p style="font-size: 19px; font-weight: 550;">SpacePlan is perfect for: </p>
+    
+  </div>
+    
+  <br/>
+  
+  <div class="pricing-table">
+    <div class="ptable-item1" >
+      <div class="ptable-single" style="height: 350px;">
+        <div class="ptable-header">
+          <div class="ptable-title">
+            <h2><span id="string701">Students</span><br/><br/></h2>
+          </div>
+        </div>
+        <div class="ptable-body">
+          <div class="ptable-description">
+            <ul>
+              <li><span id="string702">Learn about Project Management before starting your App</span></li>
+              <li><span id="string703">Prepare and nail your job interviews</span></li>
+              <li><span id="string704">Explore a complete PM tool box</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="ptable-item1 featured-item">
+      <div class="ptable-single" style="height: 350px;">
+        <div class="ptable-header" style="background: #ff6708;">
+          <div class="ptable-title">
+            <h2><span id="string705">Businesses</span><br/><br/></h2>
+          </div>
+        </div>
+        <div class="ptable-body">
+          <div class="ptable-description">
+            <ul>
+              <li><span id="string706">Grow junior Project Managers</span></li>
+              <li><span id="string707">Get the team to speak the PM language</span></li>
+              <li><span id="string708">Enable career changes : from Expert to Lead</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="ptable-item1">
+      <div class="ptable-single" style="height: 350px;">
+        <div class="ptable-header" >
+          <div class="ptable-title">
+            <h2><span id="string709">Educational Institutions</span></h2>
+          </div>
+        </div>
+        <div class="ptable-body">
+          <div class="ptable-description">
+            <ul>
+              <li><span id="string710">Teach easily complex Project Management principles</span></li>
+              <li><span id="string711">Leverage a real world project simulation</span></li>
+              <li><span id="string712">Monitor students progress with data</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ptable-item1 featured-item">
+      <div class="ptable-single" style="height: 350px;">
+        <div class="ptable-header" style="background: #ff6708;">
+          <div class="ptable-title">
+            <h2><span id="string713">Consultants</span><br/><br/></h2>
+          </div>
+        </div>
+        <div class="ptable-body">
+          <div class="ptable-description">
+            <ul>
+              <li><span id="string714">Expand your offering, deliver an impactful experience</span></li>
+              <li><span id="string715">Offer an immersive and interactive e-learning game</span></li>
+              <li><span id="string716">Leverage a great tool for project kick-offs</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   <br/>  <br/> 
   
   <div class="text-center">
   
       <a href="./Authentification/index.html">
-    <svg class="bi d-block mx-auto mb-1" width="44" height="44" style="color:black"><use xlink:href="#joystick"/></svg> <br />
+    <svg class="bi d-block mx-auto mb-1" width="44" height="44" style="color:rgb(59, 59, 59)"><use xlink:href="#joystick"/></svg> <br />
           <button type="button" class="btn btn-warning" style="z-index: 8; font-size: 19px; box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.16), 2px 2px 6px 2px rgba(0, 0, 0, 0.11); margin-bottom: 6px;">
-          <strong><span id="tryn">Play SpacePlan now</span> &raquo;</strong></button>
+          <strong><span id="tryn">Play SpacePlan now for free</span> &raquo;</strong></button>
       </a>
     </span>
     
   </div>
     
-  <br/> 
+ 
 
   <br/><br/><br/><br/><br/>  
+  
+</div> 
+
+
+  
+  <br/><br/><br/><br/>  
   
 </div> 
 
@@ -186,60 +377,58 @@
 
 <!-- Footer -->
 <footer class="section flex-center" style="background-color: var(--secondary-color); color:white; flex-direction: column;">
-    <p>&copy; 2025 Helioso</p>
-    <div>
-        <a href="#" style="color:white; margin: 0 0.5rem;">LinkedIn</a>
-        <a href="#" style="color:white; margin: 0 0.5rem;">Twitter</a>
-    </div>
-</footer>
+    <p>&copy; 2026 Helioso consulting</p>
+
+    <br/>
+
+    SINGAPORE - PARIS
+    
+    <br/><br/>
 
 
-
-  <!--
-
-   <header>
-    <div class="px-3 py-2 text-bg-dark">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-left justify-content-center justify-content-lg-start">
-        
-          <span style="font-size: 13px; margin-right: 240px; margin-top: 18px;"> <a href="https://www.helioso.com/" style="color: #f3f3f3; text-decoration: none"> Helioso</a> &copy; 2024</span> 
-
-          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+   <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
             <li>
-              <a href="#" class="nav-link text-secondary">
-                <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#home"/></svg>
+              <a href="#" class="nav-link text-secondary" style="margin-right: 22px;">
+                <svg class="bi d-block mx-auto mb-1" width="18" height="18"><use xlink:href="#home"/></svg>
                 Home</a>
             </li>
 
-
+            
           
             <li>
-              <a href="https://www.helioso.com/contact-copy" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#chat-quote-fill"/></svg>
-                <span id="feedback">Feedback</span></a>
+              <a href="/pages/contact.html" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="18" height="18" fill="current-color"><use xlink:href="#chat-quote-fill"/></svg>
+                Contact</a>
             </li>
+
+
+            
+        <div style="margin-top: 18px;">
+        <span style="font-size: 15px; margin-left: 444px; margin-right: 42px;"> <a href="../TermsofUse/index.html" style="color: #f3f3f3; text-decoration: none"> <span id="terms">Terms of Use</span></a></span>
+        <span style="font-size: 15px;"><a href="../PrivacyPolicy/index.html" style="color: #f3f3f3; text-decoration: none"> <span id="privacy">Privacy Policy</span></a></span> <br />
+        </div>
+
+
          
           </ul>
 
-        </div>
-      </div>
-    </div>
-   </header>
+</footer>
 
-  -->
 
   
 
 </main>
 
    
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
 
-   <!--  <script  src="./index.js"></script>  -->  
+ <!--   <script  src="./js/index.js"></script>  --> 
    
-    <script src="../../dist/bundle.js"></script>
+ <!--   <script src="./dist/bundle.js"></script>  -->
 
   </body>
 
 
 </html>
+
+  
