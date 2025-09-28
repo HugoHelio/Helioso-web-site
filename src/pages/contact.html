@@ -109,24 +109,65 @@
 
           <li><a href="/pages/contact.html" class="nav-link px-2" style="margin-left: 36px; color: #ff5100;" >
             <svg class="bi d-block mx-auto mb-1" width="22" height="22"><use xlink:href="#chevron-right"/></svg>
-            <span id="btncontact">About</span></a></li>
+            <span id="btncontact">Contact</span></a></li>
         </ul>
   
       </div>
 
 </header>
 
+
+<section class="what-section">
+
+  <div style="align-content: left; text-align: left; margin-top: -10px; ">
+     <img src="/assets/img/hugues/PhotowebHugo7.png" alt="Hugues Ricour"  width="202" height="auto" style="margin-right: 42px;" > 
+  </div>
+
+  <div style="margin-top: -160px;">
+
+   <h2>Ready to start?</h2>
+
+   <br/>
+
+    <p>We empower tech teams through effective project management, coaching, and interactive learning.<br/>
+      <br/>
+       Our focus:</p>
+
+  
+  <div class="what-grid">
+    <div class="what-card">
+      <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+      <h3>Clarity</h3>
+      <p>Nailing the Why<br/> 
+         SMART roadmap</p>
+    </div>
+    <div class="what-card">
+        <div class="icon"><i class="fa-solid fa-shuffle"></i></div>
+      <h3>Agility</h3>
+      <p>Candid feedback<br/>
+         Continuous iteration</p>
+    </div>
+    <div class="what-card">
+     <div class="icon"><i class="fa-solid fa-users"></i></div>
+      <h3>Engagement</h3>
+      <p>for your Team<br/>
+         for your Users</p>
+    </div>
+  </div>
+
+  </div>
+  
+
 <br/>
+</section>
+
 
 <section class="section container">
-    <h2>Our Mission & Values</h2>
-    <p>I created Helioso to empower tech and game teams through effective project management, coaching, and interactive learning. My focus is on clarity, agility, and engagement.</p>
-
-
-<br/><br/><br/>
-
+   
     <h2>Contact Me</h2>
-    <form action="#" method="POST" style="max-width: 600px; margin:auto;">
+
+    <form id="contact-form" action="https://formspree.io/f/mpwyqblq" method="POST" style="max-width: 600px; margin:auto;">
+
         <label for="name">Name</label><br>
         <input type="text" id="name" name="name" required style="width:100%; padding:0.5rem; margin-bottom:1rem;"><br>
 
@@ -137,7 +178,16 @@
         <textarea id="message" name="message" required style="width:100%; padding:0.5rem; margin-bottom:1rem;"></textarea><br>
 
         <button type="submit">Send</button>
+
     </form>
+
+    
+
+<!-- Thank you message (hidden by default) -->
+<p id="thank-you" style="display:none; text-align:center; color:green; margin-top:1rem; opacity:0; transition: opacity 1.5s ease;">
+  ✅ Thank you! Your message has been sent.
+</p>
+
 </section>
 
 
@@ -158,37 +208,18 @@
   </div>
 
   
-  <p class="text-center">
-    _____________________<br/>
+  <p class="text-center" style="color: rgb(255, 106, 0);">
+    ___________________<br/>
   </p>
+
+  <br/><br/><br/><br/>
   
-
-
-
-
-  <br/><br/>
-
-
-
-  <div class = text-center>
-    ____________________<br/><br/>
-
-    
-
-  <br/><br/><br/><br/><br/>  
-  
-</div> 
-
-
-
 
 
 <!-- Footer -->
 <footer class="section flex-center" style="background-color: var(--secondary-color); color:white; flex-direction: column;">
     <p>&copy; 2026 Helioso consulting</p>
-
-    <br/>
-
+   
     SINGAPORE - PARIS
     
     <br/><br/>
@@ -212,8 +243,8 @@
 
             
         <div style="margin-top: 18px;">
-        <span style="font-size: 15px; margin-left: 444px; margin-right: 42px;"> <a href="../TermsofUse/index.html" style="color: #f3f3f3; text-decoration: none"> <span id="terms">Terms of Use</span></a></span>
-        <span style="font-size: 15px;"><a href="../PrivacyPolicy/index.html" style="color: #f3f3f3; text-decoration: none"> <span id="privacy">Privacy Policy</span></a></span> <br />
+        <span style="font-size: 15px; margin-left: 444px; margin-right: 42px;"> <a href="https://hlc.helioso.com/TermsofUse/index.html#en" style="color: #f3f3f3; text-decoration: none"> <span id="terms">Terms of Use</span></a></span>
+        <span style="font-size: 15px;"><a href="https://hlc.helioso.com/PrivacyPolicy/index.html#en" style="color: #f3f3f3; text-decoration: none"> <span id="privacy">Privacy Policy</span></a></span> <br />
         </div>
 
 
