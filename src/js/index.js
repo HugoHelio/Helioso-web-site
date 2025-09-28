@@ -82,36 +82,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // contact form thank you and reset
+// Check if the contact form exists first
 
-document.getElementById("contact-form").addEventListener("submit", async function(e) {
-  e.preventDefault(); // stop normal form submission
+const contactForm = document.getElementById("contact-form");
 
-  const form = e.target;
-  const formData = new FormData(form);
+if (contactForm) {
+  contactForm.addEventListener("submit", async function(e) {
+    e.preventDefault(); // stop normal form submission
 
-  // Send data to Formspree
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: formData,
-    headers: { 'Accept': 'application/json' }
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: contactForm.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      const thankYou = document.getElementById("thank-you");
+
+      if (response.ok) {
+        contactForm.reset(); // clear the fields
+
+        if (thankYou) {
+          thankYou.style.display = "block";
+          setTimeout(() => { thankYou.style.opacity = "1"; }, 50); // fade in
+          setTimeout(() => { thankYou.style.opacity = "0"; }, 4000); // fade out
+          setTimeout(() => { thankYou.style.display = "none"; }, 5000); // hide completely
+        }
+      } else {
+        alert("❌ Oops! Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("❌ Network error. Please try again.");
+    }
   });
-
-  if (response.ok) {
-    form.reset(); // clear the fields
-    const thankYou = document.getElementById("thank-you");
-
-    // Show message
-    thankYou.style.display = "block";
-    setTimeout(() => { thankYou.style.opacity = "1"; }, 50); // fade in
-
-    // Fade out after 6 seconds
-    setTimeout(() => { thankYou.style.opacity = "0"; }, 6000);
-
-    // Hide completely after fade-out
-    setTimeout(() => { thankYou.style.display = "none"; }, 5000);
-
-  } else {
-    alert("❌ Oops! Something went wrong. Please try again.");
-  }
-});
-
+}
