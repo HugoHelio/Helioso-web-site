@@ -14,10 +14,12 @@
 
     "redirects": [
       {
-        "source": "/**",
+        "source": "/",
         "destination": "https://helioso.com",
         "type": 301
       }
-    ]
+    ],
+     "cleanUrls": true,
+     "trailingSlash": false
   }
 }
