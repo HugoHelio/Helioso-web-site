@@ -228,6 +228,7 @@ button:hover, .btn:hover {
 .what-section {
   text-align: center;
   padding: 2rem 2rem;
+  z-index: 6;
   background: #f4f4f4; /* light background to separate from How section */
 }
 
@@ -245,11 +246,13 @@ button:hover, .btn:hover {
   gap: 2rem;
   max-width: 1210px;
   margin: 0 auto;
+   z-index: 6;
 }
 
 /* Cards */
 .what-card {
   padding: 1.2rem;
+   z-index: 6;
   border-radius: 16px;
   background: #fff;
   border: 2px solid #eee;
