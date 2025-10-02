@@ -160,21 +160,120 @@ body {
 /* Parent box */
 
 
+.definition-box {
+  position: relative; /* needed so decorative image can be absolute */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;           /* allows stacking on small screens */
+  gap: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+  overflow: hidden;          /* prevents visual overflow from images */
+  background: linear-gradient(135deg,#171717, #4e4e4e);
+  color: #f3f3f3;
+}
 
-.definition-box0 {
-  background: linear-gradient(135deg,#171717, #4e4e4e );
-  align-items: right;
-  text-align: right;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-  margin-left: 0;
-  margin-right: 0;
+/* decorative image container (behind content) */
+.background-deco {
+  position: absolute;
+  left: 20px;
+  bottom: 0px;
+  z-index: 1;                /* behind main content */
+  pointer-events: none;      /* won't intercept taps/clicks */
+  opacity: 0.5;             /* subtle decorative effect */
+}
+.background-deco img {
+  display: block;
+  max-width: 360px;
+  height: auto;
+  width: auto;
+  user-select: none;
+}
+
+/* main text block */
+.definition-box .content {
+  position: relative;
+  z-index: 3;                /* above decorative image */
+  flex: 1 1 360px;
+  max-width: 720px;
+  text-align: left;
+  padding-left: 8px;
+}
+.definition-box .content h3 {
+  font-size: 32px;
+  font-weight: 550;
+  margin: 0 0 18px 0;
+  color: rgb(235, 234, 231);
+}
+.definition-box .content p {
+  margin: 0 0 18px 0;
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+/* portrait image on the right */
+.definition-box .portrait {
+  z-index: 3;
+  flex: 0 0 auto;
+  align-self: flex-end;
+}
+.definition-box .portrait img {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
  
+}
+
+/* -------------------------
+   Responsive rules
+   ------------------------- */
+
+/* medium / tablet: reduce sizes a bit, keep side-by-side if possible */
+@media (max-width: 900px) {
+  .definition-box {
+    padding: 36px 20px;
+  }
+  .background-deco img { max-width: 260px; }
+  .definition-box .content h3 { font-size: 28px; }
+  .definition-box .content p { font-size: 17px; }
+  .definition-box .portrait img { max-width: 260px; }
+}
+
+/* mobile: stack vertically, center content, hide decorative image for clarity */
+@media (max-width: 600px) {
+  .definition-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 28px 16px;
+  }
+
+  .definition-box .content {
+    order: 1;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .definition-box .portrait {
+    order: 2;
+    margin-top: 12px;
+  }
+  .definition-box .portrait img {
+    max-width: 80%;
+  }
+
+  /* hide decorative on small screens so it doesn't clutter or overlap */
+  .background-deco { display: none; }
 }
 
 
 
-.definition-box00 {
-   background: linear-gradient(135deg, #f5f5f5, #a4a4a4);
+
+.definition-box0 {
+  background: linear-gradient(135deg,#171717, #4e4e4e );
   align-items: right;
   text-align: right;
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
@@ -195,6 +294,41 @@ body {
  
   z-index: 3;
 }
+
+
+
+
+/* decorative background2 */
+.background-deco2 {
+  position: absolute;
+  right: 0px;         /* 👈 anchored right */
+  bottom: 24px;        /* 👈 anchored bottom */
+  z-index: 1;          /* behind content */
+  pointer-events: none;
+  opacity: 0.5;       /* subtle effect */
+}
+.background-deco2 img {
+  display: block;
+  max-width: 380px;
+  height: auto;
+  user-select: none;
+}
+
+
+/* responsive behavior */
+@media (max-width: 900px) {
+  .background-deco2 img {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .background-deco2 {
+    display: none; /* hide on small screens */
+  }
+}
+
+
 
 
 
@@ -408,6 +542,57 @@ button:hover, .btn:hover {
 
 /* Bio section */
 
+
+.definition-box4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+  padding: 32px;
+  background: #f9f9f9; /* adjust to match your theme */
+  flex-wrap: wrap;
+}
+
+.definition-box4 .portrait img {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.definition-box4 .about-text {
+  flex: 1 1 300px;
+  text-align: left;
+  margin-left: 26px;
+}
+
+.definition-box4 h2 {
+  margin-bottom: 8px;
+}
+
+.definition-box4 .divider {
+  color: rgb(255, 106, 0);
+  margin: 0 0 24px 0;
+}
+
+/* 📱 On mobile: stack portrait above text */
+@media (max-width: 768px) {
+  .definition-box1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .definition-box4 .portrait img {
+    margin: 0 auto 20px auto;
+  }
+
+  .definition-box4 .about-text {
+    text-align: center;
+  }
+}
+
+
 .linkedin-icon {
   color: #ff6600; /* orange, change to #000 for black or #555 for grey */
   font-size: 32px; /* adjust size */
@@ -417,6 +602,217 @@ button:hover, .btn:hover {
 .linkedin-icon:hover {
   color: #0077b5; /* LinkedIn blue on hover */
 }
+
+
+
+/* mentoring */
+
+
+.definition-box5 {
+  position: relative; /* needed so decorative image can be absolute */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;           /* allows stacking on small screens */
+  gap: 20px;
+  padding-left: 32px;
+  overflow: hidden;          /* prevents visual overflow from images */
+  background: linear-gradient(135deg,#171717, #4e4e4e);
+  color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.mentoring-container {
+  display: flex;
+  align-items: center;      /* vertically align */
+  justify-content: space-between; 
+  color: #f3f3f3;
+  padding-left: 20px;
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 26px;
+}
+
+.mentoring-text {
+  max-width: 55%;           /* text column */
+  line-height: 1.7;
+}
+
+.mentoring-text h2 {
+  font-size: 28px;
+  font-weight: 550;
+  margin-bottom: 20px;
+  color: rgb(245, 245, 245);
+}
+
+.mentoring-text p {
+  margin-bottom: 20px;
+}
+
+.mentoring-text button {
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.16),
+              2px 2px 6px rgba(0,0,0,0.11);
+  margin-top: 10px;
+}
+
+.mentoring-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+/* gamification section */
+
+.definition-box00 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* ensures no weird scrollbars */
+  background: linear-gradient(135deg,#f0f1f1, #a2a2a3);
+}
+
+.gamification-text {
+  flex: 1;
+  text-align: right;
+  padding-right: 46px; /* keep the spacing on the right */
+  z-index: 2; /* above background */
+}
+
+.gamification-text p {
+  line-height: 1.7;
+  font-size: 16px;
+  margin: 0;
+}
+
+.gamification-image-left {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.gamification-image-left img {
+  display: block;
+  width: 440px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.gamification-decoration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.gamification-decoration img {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+
+
+/* HLC section */
+
+
+.learning-text {
+  flex: 1;
+  text-align: left;
+  padding-left: 46px; /* keep spacing on the left */
+  z-index: 2;
+  font-size: 17px;
+  color: #333333;
+  margin-top: -66px;
+}
+
+.learning-text span {
+  font-size: 32px;
+  font-weight: 550;
+}
+
+.learning-image-right {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.learning-image-right img {
+  display: block;
+  width: 460px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.learning-decoration {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.learning-decoration img {
+  display: block;
+  width: 300px;
+  height: auto;
+  opacity: 0.6;
+}
+
+
+
+/* ready to start */
+
+.ready-container {
+  display: flex;
+  align-items: flex-start;   /* text aligned top */
+  justify-content: flex-start;
+  gap: 30px;
+  margin: 0;
+  padding: 10px 0;
+  
+}
+
+.ready-portrait img {
+  display: block;
+  width: 182px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.ready-content {
+  flex: 1;
+}
+
+/* Mobile: stack portrait above text */
+@media (max-width: 768px) {
+  .ready-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ready-portrait img {
+    margin-bottom: 20px;
+  }
+}
+
 
 
 
