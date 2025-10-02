@@ -168,7 +168,6 @@ body {
   flex-wrap: wrap;           /* allows stacking on small screens */
   gap: 24px;
   padding-left: 32px;
-  padding-right: 32px;
   overflow: hidden;          /* prevents visual overflow from images */
   background: linear-gradient(135deg,#171717, #4e4e4e);
   color: #f3f3f3;
@@ -208,8 +207,8 @@ body {
 }
 .definition-box .content p {
   margin: 0 0 18px 0;
-  line-height: 1.4;
-  font-size: 18px;
+  line-height: 1.5;
+  font-size: 17px;
 }
 
 /* portrait image on the right */
@@ -220,11 +219,11 @@ body {
 }
 .definition-box .portrait img {
   display: block;
-  max-width: 320px;
+  max-width: 400px;
+  max-height: 500px;
   width: 100%;
   height: auto;
-  border-radius: 6px;
- 
+   
 }
 
 /* -------------------------
@@ -479,7 +478,7 @@ button:hover, .btn:hover {
 
 .carousel-slide {
   min-width: 100%;               /* one slide visible */
- 
+  min-height: 300px;
 }
 
 .carousel-card {
@@ -541,6 +540,7 @@ button:hover, .btn:hover {
 
 
 /* Bio section */
+
 
 
 .definition-box4 {
@@ -608,23 +608,6 @@ button:hover, .btn:hover {
 /* mentoring */
 
 
-.definition-box5 {
-  position: relative; /* needed so decorative image can be absolute */
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;           /* allows stacking on small screens */
-  gap: 20px;
-  padding-left: 32px;
-  overflow: hidden;          /* prevents visual overflow from images */
-  background: linear-gradient(135deg,#171717, #4e4e4e);
-  color: #f3f3f3;
-  margin: 0;
-  padding: 0;
-}
-
-
-
 .mentoring-container {
   display: flex;
   align-items: center;      /* vertically align */
@@ -643,13 +626,6 @@ button:hover, .btn:hover {
   line-height: 1.7;
 }
 
-.mentoring-text h2 {
-  font-size: 28px;
-  font-weight: 550;
-  margin-bottom: 20px;
-  color: rgb(245, 245, 245);
-}
-
 .mentoring-text p {
   margin-bottom: 20px;
 }
@@ -660,70 +636,112 @@ button:hover, .btn:hover {
   margin-top: 10px;
 }
 
-.mentoring-image img {
-  max-width: 100%;
-  height: auto;
-}
-
 
 
 
 /* gamification section */
 
+
 .definition-box00 {
   position: relative;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;           /* allows stacking on small screens */
+  gap: 24px;
   width: 100%;
   margin: 0;
   padding: 0;
+  padding-right: 32px;
   overflow: hidden; /* ensures no weird scrollbars */
-  background: linear-gradient(135deg,#f0f1f1, #a2a2a3);
+  background: linear-gradient(135deg,#f0f1f1, #a3a3a3);
+  color: #000000;
 }
 
-.gamification-text {
-  flex: 1;
-  text-align: right;
-  padding-right: 46px; /* keep the spacing on the right */
-  z-index: 2; /* above background */
+
+/* main text block */
+.definition-box00 .content {
+  position: relative;
+  z-index: 3;                /* above decorative image */
+  flex: 1 1 360px;
+  max-width: 720px;
+  text-align: left;
+  padding-right: 42px;
+}
+.definition-box00 .content h3 {
+  font-size: 32px;
+  font-weight: 550;
+  margin: 0 0 18px 0;
+  color: rgb(51, 51, 51);
+}
+.definition-box00 .content p {
+  margin: 0 0 18px 0;
+  line-height: 1.6;
+  font-size: 17px;
 }
 
-.gamification-text p {
-  line-height: 1.7;
-  font-size: 16px;
-  margin: 0;
+/* portrait image on the left */
+.definition-box00 .portrait {
+  z-index: 3;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  margin-left: 0;
 }
-
-.gamification-image-left {
-  flex-shrink: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.gamification-image-left img {
+.definition-box00 .portrait img {
   display: block;
-  width: 440px;
+  max-width: 400px;
+  max-height: 500px;
+  width: 100%;
   height: auto;
-  margin: 0;
-  padding: 0;
+   
 }
 
-.gamification-decoration {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  opacity: 0.6;
+/* -------------------------
+   Responsive rules
+   ------------------------- */
+
+/* medium / tablet: reduce sizes a bit, keep side-by-side if possible */
+@media (max-width: 900px) {
+  .definition-box00 {
+    padding: 36px 20px;
+  }
+  .background-deco img { max-width: 260px; }
+  .definition-box00 .content h3 { font-size: 28px; }
+  .definition-box00 .content p { font-size: 17px; }
+  .definition-box00 .portrait img { max-width: 260px; }
 }
 
-.gamification-decoration img {
-  display: block;
-  width: 300px;
-  height: auto;
+/* mobile: stack vertically, center content, hide decorative image for clarity */
+@media (max-width: 600px) {
+  .definition-box00 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 28px 16px;
+  }
+
+  .definition-box00 .content {
+    order: 1;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .definition-box00 .portrait {
+    order: 2;
+    margin-top: 12px;
+  }
+  .definition-box00 .portrait img {
+    max-width: 80%;
+  }
+
+  /* hide decorative on small screens so it doesn't clutter or overlap */
+  .background-deco { display: none; }
 }
+
+
+
+
+
 
 
 
