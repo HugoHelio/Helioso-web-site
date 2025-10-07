@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Helioso consulting, Hugues Ricour, main web site">
-    <meta name="author" content="Hugues Ricour">
-    <title>Helioso - main index</title>
-    
-    <link rel="canonical" href="https://www.helioso.com/">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Helioso consulting, Hugues Ricour, main web site">
+  <meta name="author" content="Hugues Ricour">
+  <title>Helioso - main index</title>
+  <link rel="canonical" href="https://www.helioso.com/">
 
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="/assets/img/brand/fav.png"> 
-  <!--  <link rel="stylesheet" href="/assets/css/style.css"> -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+   <!-- Preload hero image -->
+  <link rel="preload" as="image" href="/assets/img/hugues/PhotowebHugo1.avif">
+ 
+  <!-- ✅ Preload & async load Bootstrap -->
+  <link rel="preload" href="/assets/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/css/bootstrap.min.css"></noscript>
 
-  </head>
+  <!-- ✅ Preload & async load Font Awesome -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  <!-- ✅ Your main stylesheet (load last so it can override others) -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Optional: preconnect for CDN performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <link rel="icon" href="/assets/img/brand/fav.png">
+
+</head>
+
+
 
 
 <body>
@@ -123,7 +142,7 @@
   <div class="definition-box">
   <!-- decorative image (kept in DOM but visually behind content) -->
   <div class="background-deco" aria-hidden="true">
-    <img src="/assets/img/presentation/background1.avif" alt="">
+    <img src="/assets/img/presentation/background1.avif" alt="" loading="lazy" decoding="async">
   </div>
 
   <div class="content">
@@ -141,8 +160,8 @@
     </a>
   </div>
 
-  <div class="portrait" style="margin-right: 42px;">
-    <img src="/assets/img/hugues/PhotowebHugo1.png" alt="Hugues Ricour">
+  <div class="portrait" style="margin-right: 42px; order:2">
+    <img src="/assets/img/hugues/PhotowebHugo1.avif" alt="Hugues Ricour" fetchpriority="high">
   </div>
 </div>
 
@@ -228,7 +247,7 @@
 
 <!-- decorative image just like background1 -->
   <div class="background-deco2" aria-hidden="true">
-    <img src="/assets/img/presentation/background2.avif" alt="">
+    <img src="/assets/img/presentation/background2.avif" alt="" loading="lazy" decoding="async">
   </div>
 
   <br/>
@@ -247,7 +266,7 @@
 
   <!-- Portrait -->
     <div class="portrait">
-      <img src="/assets/img/hugues/PhotowebHugo0.png" 
+      <img src="/assets/img/hugues/PhotowebHugo0.avif" 
            alt="Hugues Ricour">
 
            <br/><br/><br/> 
@@ -321,7 +340,7 @@
       <div class="ptable-single" style="height: 350px;">
         <div class="ptable-header">
           <div class="ptable-title">
-            <h2><span id="string705">Businesses</span><br/><br/></h2>
+            <h2><span id="string705" style="color: #242424;">Businesses</span><br/><br/></h2>
           </div>
         </div>
         <div class="ptable-body">
@@ -374,9 +393,9 @@
 
    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
             <li>
-              <a href="#" class="nav-link text-secondary" style="margin-right: 22px;">
-                <svg class="bi d-block mx-auto mb-1" width="18" height="18"><use xlink:href="#home"/></svg>
-                Home</a>
+              <a href="#" class="nav-link text-secondary" style="margin-right: 22px; ">
+                <svg class="bi d-block mx-auto mb-1" width="18" height="18" style=" color: rgb(244, 244, 244)"><use xlink:href="#home"/></svg>
+                <span style="color: rgb(244, 244, 244)">Home</span></a>
             </li>
 
             
@@ -391,8 +410,8 @@
             
             
         <div style="margin-top: 18px;">
-        <span style="font-size: 15px; margin-left: 444px; margin-right: 42px;"> <a href="https://hlc.helioso.com/TermsofUse/index.html#en" style="color: #f3f3f3; text-decoration: none"> <span id="terms">Terms of Use</span></a></span>
-        <span style="font-size: 15px;"><a href="https://hlc.helioso.com/PrivacyPolicy/index.html#en" style="color: #f3f3f3; text-decoration: none"> <span id="privacy">Privacy Policy</span></a></span> <br />
+        <span style="font-size: 16px; margin-left: 444px; margin-right: 46px;"> <a href="https://hlc.helioso.com/TermsofUse/index.html#en" style="color: #f3f3f3; text-decoration: none"> <span id="terms">Terms of Use</span></a></span>
+        <span style="font-size: 16px;"><a href="https://hlc.helioso.com/PrivacyPolicy/index.html#en" style="color: #f3f3f3; text-decoration: none"> <span id="privacy">Privacy Policy</span></a></span> <br />
         </div>
 
          
@@ -440,7 +459,7 @@
 </main>
 
    
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
 
  <!--   <script  src="./js/index.js"></script>  --> 
    

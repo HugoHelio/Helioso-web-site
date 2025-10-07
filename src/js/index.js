@@ -32,8 +32,6 @@ const app = initializeApp(firebaseConfig);
 import '../assets/css/style.css';
 
 
-
-// Simple carousel logic
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.carousel-track');
   const slides = Array.from(track.children);
@@ -42,41 +40,52 @@ document.addEventListener('DOMContentLoaded', () => {
   const carouselContainer = document.querySelector('.carousel-container');
 
   let currentSlide = 0;
+  let slideWidth = slides[0].offsetWidth; // initial width
+  let autoSlide;
 
+  // Function to update transform (GPU-accelerated, no reflow)
   function updateCarousel() {
-    const slideWidth = slides[0].getBoundingClientRect().width;
     track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
   }
 
-  // Arrow buttons
-  nextBtn.addEventListener('click', () => {
+  // Recalculate slide width only on resize
+  function handleResize() {
+    slideWidth = slides[0].offsetWidth;
+    updateCarousel();
+  }
+  window.addEventListener('resize', handleResize);
+
+  // Go to next slide
+  function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
     updateCarousel();
-  });
+  }
 
-  prevBtn.addEventListener('click', () => {
+  // Go to previous slide
+  function prevSlide() {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     updateCarousel();
-  });
+  }
 
-  // Automatic slide every 3s
-  let autoSlide = setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateCarousel();
-  }, 5000);
+  // Attach arrow button events
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
 
-  // Pause on hover
-  carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
-  carouselContainer.addEventListener('mouseleave', () => {
-    autoSlide = setInterval(() => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      updateCarousel();
-    }, 5000);
-  });
+  // Auto-slide every 5s
+  function startAutoSlide() {
+    autoSlide = setInterval(nextSlide, 5000);
+  }
 
-  // Initialize
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+  carouselContainer.addEventListener('mouseleave', startAutoSlide);
+
+  // Initialize carousel
   updateCarousel();
-  window.addEventListener('resize', updateCarousel);
+  startAutoSlide();
 });
 
 

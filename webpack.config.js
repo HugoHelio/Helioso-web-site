@@ -34,6 +34,7 @@ module.exports = {
       template: './src/index.html', // your HTML template
        filename: 'index.html', // output name
        inject: 'body',  // <- automatically inject bundle
+       scriptLoading: 'defer', // ✅ defer injected bundle
     }),
 
     // HLCpage page
@@ -41,18 +42,27 @@ module.exports = {
       template: './src/pages/HLCpage.html',
       filename: 'pages/HLCpage.html', // output name in dist
       inject: 'body',  // <- automatically inject bundle
+      scriptLoading: 'defer',
     }),
     // Services page
     new HtmlWebpackPlugin({
       template: './src/pages/services.html',
       filename: 'pages/services.html',
       inject: 'body',  // <- automatically inject bundle
+      scriptLoading: 'defer',
     }),
-    // Services page
+    // Contact page
     new HtmlWebpackPlugin({
       template: './src/pages/contact.html',
       filename: 'pages/contact.html',
       inject: 'body',  // <- automatically inject bundle
+      scriptLoading: 'defer',
+    }),
+
+    new CopyPlugin({
+      patterns: [
+        { from: 'robots.txt', to: '' } // copies robots.txt to dist/
+      ],
     }),
 
      new CopyWebpackPlugin({
@@ -90,7 +100,6 @@ module.exports = {
   
   },
   
-
 
 // plugins: [
  // new HtmlWebpackPlugin({
