@@ -3,21 +3,18 @@
 // sitemap.config.js
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
 
+// Liste des URLs publiques (sans le dossier dist/pages)
 const paths = [
-  { path: '', lastmod: new Date().toISOString() },
-  { path: '/services', lastmod: new Date().toISOString() },
-  { path: '/HLC', lastmod: new Date().toISOString() },
-  { path: '/contact', lastmod: new Date().toISOString() },
-  // ajoute ici toutes tes routes importantes
+  { path: '' },           // page d'accueil
+  { path: '/services' },
+  { path: '/HLC' },
+  { path: '/contact' },
 ];
 
-const SitemapOptions = {
-  base: 'https://www.helioso.com',
-  paths,
-  options: {
-    filename: 'sitemap.xml',
-    lastmod: true,
-  },
-};
 
-module.exports = SitemapOptions;
+// Options du plugin
+const options = {
+  base: 'https://www.helioso.com',
+  filename: 'sitemap.xml',
+  lastmod: true,          // ajoute la date de dernière modification
+};

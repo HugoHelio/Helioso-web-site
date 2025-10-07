@@ -32,6 +32,9 @@ module.exports = {
      },
 
      plugins: [
+
+     new SitemapPlugin(paths, options),
+
       // Main page
     new HtmlWebpackPlugin({
       template: './src/index.html', // your HTML template
@@ -78,12 +81,7 @@ module.exports = {
       ],
     }),
 
-    new SitemapPlugin(sitemapConfig.paths, {
-          base: sitemapConfig.base,
-          filename: sitemapConfig.options.filename,
-          lastmod: sitemapConfig.options.lastmod,
-        }),
-  
+    
   ],
     
  module: {
