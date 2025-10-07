@@ -6,7 +6,9 @@ const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
-const sitemapConfig = require('./sitemap.config');
+
+// On importe notre config du sitemap
+const { pathsArray, sitemapOptions } = require('./sitemap.config');
 
 module.exports = {
     mode: 'production',
@@ -33,7 +35,7 @@ module.exports = {
 
      plugins: [
 
-     new SitemapPlugin(paths, options),
+     new SitemapPlugin(pathsArray, sitemapOptions),
 
       // Main page
     new HtmlWebpackPlugin({
