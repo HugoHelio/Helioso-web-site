@@ -5,7 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const path = require('path');
 
-const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const SitemapPlugin = require('sitemap-webpack-plugin-next');
 
 // Définition des URLs publiques
 const paths = [
@@ -55,9 +55,9 @@ module.exports = {
     }),
 
     
-      new SitemapPlugin({
+    new SitemapPlugin({
       base: 'https://www.helioso.com',
-      paths,        // <-- ici le tableau des URLs
+      paths,
       options: { 
         filename: 'sitemap.xml',
         lastmod: true
