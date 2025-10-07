@@ -1103,3 +1103,18 @@ h1.demo-title a {
   }
 }
 
+
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
