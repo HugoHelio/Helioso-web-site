@@ -1106,6 +1106,19 @@ h1.demo-title a {
 
 
 
+/* optim footer */
+
+@media (max-width: 520px) {
+    .footer ul li {
+        margin: 5px 8px; /* smaller spacing */
+        font-size: 14px;
+    }
+    .footer p {
+        font-size: 14px;
+    }
+}
+
+
 html, body {
   overflow-x: hidden;
   width: 100%;
@@ -1119,6 +1132,8 @@ img, svg {
   max-width: 100%;
   height: auto;
 }
+
+
 
 
 
