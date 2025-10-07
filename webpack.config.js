@@ -5,19 +5,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const path = require('path');
 
-const SitemapPlugin = require('sitemap-webpack-plugin-next');
-
-// Définition des URLs publiques
-const paths = [
-  { path: '' },
-  { path: '/services' },
-  { path: '/HLC' },
-  { path: '/contact' },
-];
-
-// On importe notre config du sitemap
-const { pathsArray, sitemapOptions } = require('./sitemap.config');
-
 
 
 module.exports = {
@@ -55,15 +42,6 @@ module.exports = {
     }),
 
     
-    new SitemapPlugin({
-      base: 'https://www.helioso.com',
-      paths,
-      options: { 
-        filename: 'sitemap.xml',
-        lastmod: true
-      }
-    }),
-
     // HLCpage page
     new HtmlWebpackPlugin({
       template: './src/pages/HLCpage.html',
