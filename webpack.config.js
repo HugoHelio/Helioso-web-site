@@ -7,8 +7,18 @@ const path = require('path');
 
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
 
+// Définition des URLs publiques
+const paths = [
+  { path: '' },
+  { path: '/services' },
+  { path: '/HLC' },
+  { path: '/contact' },
+];
+
 // On importe notre config du sitemap
 const { pathsArray, sitemapOptions } = require('./sitemap.config');
+
+
 
 module.exports = {
     mode: 'production',
@@ -35,7 +45,6 @@ module.exports = {
 
      plugins: [
 
-     new SitemapPlugin(pathsArray, sitemapOptions),
 
       // Main page
     new HtmlWebpackPlugin({
@@ -43,6 +52,16 @@ module.exports = {
        filename: 'index.html', // output name
        inject: 'body',  // <- automatically inject bundle
        scriptLoading: 'defer', // ✅ defer injected bundle
+    }),
+
+    
+      new SitemapPlugin({
+      base: 'https://www.helioso.com',
+      paths,        // <-- ici le tableau des URLs
+      options: { 
+        filename: 'sitemap.xml',
+        lastmod: true
+      }
     }),
 
     // HLCpage page
