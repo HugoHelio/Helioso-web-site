@@ -2,8 +2,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+
 const path = require('path');
 
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const sitemapConfig = require('./sitemap.config');
 
 module.exports = {
     mode: 'production',
@@ -71,11 +74,16 @@ module.exports = {
           from: 'src/assets', // ✅ copies everything inside assets/
           to: 'assets',
           noErrorOnMissing: true, // don’t break if empty
-          }, // ✅ copy entire assets folder
-     
-
+          }, // ✅ copy entire assets folder 
       ],
     }),
+
+    new SitemapPlugin(sitemapConfig.paths, {
+          base: sitemapConfig.base,
+          filename: sitemapConfig.options.filename,
+          lastmod: sitemapConfig.options.lastmod,
+        }),
+  
   ],
     
  module: {
