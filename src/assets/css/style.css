@@ -6,7 +6,7 @@
     --font-color: #222222;
     --font-family: 'Inter', Helvetica, sans-serif;
 }
-
+ 
 a {
     color: var(--primary-color);
     text-decoration: none;
