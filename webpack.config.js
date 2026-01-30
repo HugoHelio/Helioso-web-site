@@ -5,15 +5,20 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const path = require('path');
 
+const isProd = process.env.NODE_ENV === 'production';
+
+   console.log('Webpack mode:', isProd ? 'production' : 'development');
 
 
 module.exports = {
-    mode: 'production',
-    devtool: 'eval-source-map',
+    mode: isProd ? 'production' : 'development',
+ 
+    devtool: isProd ? false : 'eval-source-map',
+
     entry: './src/js/index.js',
     output: {
       //changed here after chatgpt fix, was:  filename: 'bundle.js',
-       filename: 'bundle.[contenthash].js', // Put bundle.js inside dist/ folder inside public/ 
+      filename: isProd ? 'bundle.[contenthash].js' : 'bundle.js',  // Put bundle.js inside dist/ folder inside public/ 
       // changed: was: path: path.resolve(__dirname, 'public/dist'),
       path: path.resolve(__dirname, 'dist'), // Output goes to public/, not public/dist/
       clean: true, // clean old files in dist

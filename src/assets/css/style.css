@@ -155,6 +155,23 @@ body {
   }
 
 
+  /* Default state */
+.nav-link {
+  color: #333333;
+  transition: color 0.3s ease;
+}
+
+
+/* Target the link and its contents on hover */
+.nav-link:hover {
+  color: teal !important; /* Overrides the inline style color #333333 */
+  transition: color 0.3s ease;
+}
+
+/* Ensure the SVG respects the hover color */
+.nav-link:hover .bi {
+  fill: teal;
+}
 
 
 
